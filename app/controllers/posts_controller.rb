@@ -4,13 +4,13 @@ class PostsController < ApplicationController
   end
 
   def new
-    @author = Author.new
+    @post = Post.new
   end
 
   def create
-    @author = Author.create(author_params)
+    @post = Post.create(post_params)
 
-    redirect_to author_path(@author)
+    redirect_to post_path(@post)
   end
 
   def edit
